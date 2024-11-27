@@ -115,7 +115,7 @@ const Home = () => {
       {/* Section 1 Ends */}
 
       {/* Section 2 Starts */}
-      <div className='section-2 bg-white font-inter flex flex-col mx-auto'>
+      <div className='section-2 bg-[#f7f7f7] font-inter flex flex-col mx-auto'>
         <div className='w-screen h-80 flex justify-center items-center' style={{ backgroundImage: `url(${Bghome})` }}>
           <div className='flex flex-row gap-12'>
             <CTAButton active={true} linkto={"/signup"}>
