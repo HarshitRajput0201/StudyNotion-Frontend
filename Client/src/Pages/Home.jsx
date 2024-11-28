@@ -116,7 +116,7 @@ const Home = () => {
 
       {/* Section 2 Starts */}
       <div className='section-2 bg-[#f7f7f7] font-inter flex flex-col mx-auto'>
-        <div className='w-screen h-80 flex justify-center items-center' style={{ backgroundImage: `url(${Bghome})` }}>
+        <div className='h-80 flex justify-center items-center' style={{ backgroundImage: `url(${Bghome})` }}>
           <div className='flex flex-row gap-12'>
             <CTAButton active={true} linkto={"/signup"}>
               <div className='flex flex-row justify-center items-center gap-2'>
@@ -129,7 +129,7 @@ const Home = () => {
             </CTAButton>
           </div>
         </div>
-        <div className='w-screen flex flex-col gap-12 py-24'>
+        <div className='flex flex-col gap-12 py-24'>
           <div className="w-[1028px] mx-auto flex flex-row gap-12">
               <div className='text-4xl font-semibold'>
                 Get the skills you need for a <HighlightedText>job that is in demand.</HighlightedText>
@@ -141,9 +141,15 @@ const Home = () => {
           </div>
           <TimeLineBlock/>          
         </div>
-        <div>
-          <div></div>
+        <div className='flex flex-col gap-14 my-16'>
+          <div className='w-[1028px] mx-auto flex flex-col'>
+            <p className='text-4xl font-semibold text-center '>Your swiss knife for <HighlightedText>learning any language</HighlightedText></p>
+            <p className='text-richblack-600 text-center px-40 py-4'>Using spin making learning multiple languages easy. with 20+ languages realistic voice-over, progress tracking, custom schedule and more.</p>
+          </div>
           <LearningLanBlock/>
+          <div className='w-[1028px] mx-auto flex items-center justify-center'>
+            <CTAButton active={true} linkto={"/login"}>Learn More</CTAButton>
+          </div>
         </div>
         
       </div>
