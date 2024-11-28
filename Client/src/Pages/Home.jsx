@@ -10,7 +10,7 @@ import HighlightedText from '../Components/Core/HomePage/HighlightedText';
 import Bghome from "../assets/Images/bghome.svg"
 import TimeLineBlock from '../Components/Core/HomePage/TimeLineBlock';
 import LearningLanBlock from '../Components/Core/HomePage/LearningLanBlock';
-
+import Instructor from "../assets/Images/Instructor.png"
 const Home = () => {
   return (
     <div>
@@ -151,7 +151,30 @@ const Home = () => {
             <CTAButton active={true} linkto={"/login"}>Learn More</CTAButton>
           </div>
         </div>
-        
+      </div>
+      {/* Section 2 Ends */}
+
+      {/* Section 3 Starts */}
+      <div className='flex flex-col'>
+        <div className='w-[1028px] flex flex-row mx-auto my-20'>
+          <div className='flex items-center justify-center w-[50%]' style={{ boxShadow: "-20px -20px 0px 0px #FFFFFF" }}>
+            <img src={Instructor} alt="" />
+          </div>
+          <div className='flex flex-col items-start justify-center w-[50%] pl-20 gap-16'>
+            <div className='flex flex-col gap-3 '>
+              <p className='text-white text-4xl font-semibold w-64'>Become an <HighlightedText>Instructor</HighlightedText></p>
+              <p className='text-richblack-300'>Instructors from around the world teach millions of students on StudyNotion. We provide the tools and skills to teach what you love.</p>
+            </div>
+            <div className='flex justify-start items-center'>
+              <CTAButton active={true} linkto={"/signup"}>
+                <div className='flex flex-row justify-center items-center gap-2'>
+                  Start Teaching Today
+                  <FaArrowRight/>
+                </div>
+              </CTAButton>`
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
