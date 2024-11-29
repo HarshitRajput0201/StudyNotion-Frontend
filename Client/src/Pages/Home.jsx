@@ -10,8 +10,19 @@ import HighlightedText from '../Components/Core/HomePage/HighlightedText';
 import Bghome from "../assets/Images/bghome.svg"
 import TimeLineBlock from '../Components/Core/HomePage/TimeLineBlock';
 import LearningLanBlock from '../Components/Core/HomePage/LearningLanBlock';
-import Instructor from "../assets/Images/Instructor.png"
+import Instructor from "../assets/Images/Instructor.png";
+import { TbHeartFilled } from "react-icons/tb";
+import {FooterLink} from "../data/footer-links.js"
+import LogoLight from "../assets/Logo/Logo-Full-Light.png";
+import Facebook_Logo from "../assets/Images/Facebook_Logo.svg";
+import Google_Logo from "../assets/Images/Google_Logo.svg";
+import Twitter_Logo from "../assets/Images/Twitter_Logo.svg";
+import Youtube_Logo from "../assets/Images/Youtube_Logo.svg";
+
+
+
 const Home = () => {
+
   return (
     <div>
       {/* Section 1 Starts */}
@@ -155,7 +166,7 @@ const Home = () => {
       {/* Section 2 Ends */}
 
       {/* Section 3 Starts */}
-      <div className='flex flex-col'>
+      <div className='section-3 flex flex-col'>
         <div className='w-[1028px] flex flex-row mx-auto my-20'>
           <div className='flex items-center justify-center w-[50%]' style={{ boxShadow: "-20px -20px 0px 0px #FFFFFF" }}>
             <img src={Instructor} alt="" />
@@ -174,6 +185,147 @@ const Home = () => {
               </CTAButton>`
             </div>
           </div>
+        </div>
+      </div>
+      {/* Section 3 Ends */}
+
+      {/* Footer Starts */}
+      <div className='footer flex flex-col gap-8 bg-richblack-800 text-richblack-300 py-14'>
+        <div className='w-[1028px] mx-auto flex flex-row'>
+          <div className='w-[50%] flex flex-row gap-8 items-start border-r border-richblack-700'>
+            <div className='flex flex-col gap-4'>
+              <div className='flex justify-center items-center'>
+                <img className='w-40' src={LogoLight} alt="" />
+              </div>
+              <div className='flex flex-col gap-3'>
+                <p className='font-semibold text-richblack-100'>{FooterLink[0].title}</p>
+                <div className='flex flex-col justify-center items-start gap-2'>
+                  {
+                    FooterLink[0].links.map((link, index) => (
+                      <p className='flex justify-start items-center text-sm decoration-0' key={index}>
+                        <a href={link.link}>{link.title}</a>
+                      </p>
+                    ))
+                  }
+                </div>
+              </div>
+              <div className='flex flex-row gap-3'>
+                <div>
+                  <a className='flex justify-center items-center' href="/facebook"><img src={Facebook_Logo} alt="" className='w-6 h-6 ' /></a>
+                </div>
+                <div>
+                  <a className='flex justify-center items-center' href="/google"><img src={Google_Logo} alt="" className='w-6 h-6' /></a>
+                </div>
+                <div>
+                  <a className='flex justify-center items-center' href="/twitter"><img src={Twitter_Logo} alt="" className='w-6 h-6' /></a>
+                </div>
+                <div>
+                  <a className='flex justify-center items-center' href="/youtube"><img src={Youtube_Logo} alt="" className='w-6 h-6 ' /></a>
+                </div>
+              </div>
+            </div>
+            <div className='flex flex-col gap-9'>
+              <div className='flex flex-col gap-4'>
+                <p className='font-semibold text-richblack-100'>{FooterLink[1].title}</p>
+                <div className='flex flex-col justify-center items-start gap-2'>
+                  {
+                    FooterLink[1].links.map((link, index) => (
+                      <p className='flex justify-start items-center text-sm decoration-0' key={index}>
+                        <a href={link.link}>{link.title}</a>
+                      </p>
+                    ))
+                  }
+                </div>
+              </div>
+              <div className='flex flex-col gap-4'>
+                <p className='font-semibold text-richblack-100'>{FooterLink[2].title}</p>
+                <div className='flex flex-col justify-center items-start gap-2'>
+                  {
+                    FooterLink[2].links.map((link, index) => (
+                      <p className='flex justify-start items-center text-sm decoration-0' key={index}>
+                        <a href={link.link}>{link.title}</a>
+                      </p>
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+            <div className='flex flex-col gap-9'>
+              <div className='flex flex-col gap-4'>
+                <p className='font-semibold text-richblack-100'>{FooterLink[3].title}</p>
+                <div className='flex flex-col justify-center items-start gap-2'>
+                  {
+                    FooterLink[3].links.map((link, index) => (
+                      <p className='flex justify-start items-center text-sm decoration-0' key={index}>
+                        <a href={link.link}>{link.title}</a>
+                      </p>
+                    ))
+                  }
+                </div>
+              </div>
+              <div className='flex flex-col gap-4'>
+                <p className='font-semibold text-richblack-100'>{FooterLink[4].title}</p>
+                <div className='flex flex-col justify-center items-start gap-2'>
+                  {
+                    FooterLink[4].links.map((link, index) => (
+                      <p className='flex justify-start items-center text-sm decoration-0' key={index}>
+                        <a href={link.link}>{link.title}</a>
+                      </p>
+                    ))
+                  }
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='w-[50%] flex flex-row gap-8 justify-end items-start'>
+            <div className='flex flex-col gap-4'>
+              <p className='font-semibold text-richblack-100'>{FooterLink[5].title}</p>
+              <div className='flex flex-col justify-center items-start gap-2'>
+                {
+                  FooterLink[5].links.map((link, index) => (
+                    <p className='flex justify-start items-center text-sm decoration-0' key={index}>
+                      <a href={link.link}>{link.title}</a>
+                    </p>
+                  ))
+                }
+              </div>
+            </div>
+            <div className='flex flex-col gap-4'>
+              <p className='font-semibold text-richblack-100'>{FooterLink[6].title}</p>
+              <div className='flex flex-col justify-center items-start gap-2'>
+                {
+                  FooterLink[6].links.map((link, index) => (
+                    <p className='flex justify-start items-center text-sm decoration-0' key={index}>
+                      <a href={link.link}>{link.title}</a>
+                    </p>
+                  ))
+                }
+              </div>
+            </div>
+            <div className='flex flex-col gap-4'>
+              <p className='font-semibold text-richblack-100'>{FooterLink[7].title}</p>
+              <div className='flex flex-col justify-center items-start gap-2'>
+                {
+                  FooterLink[7].links.map((link, index) => (
+                    <p className='flex justify-start items-center text-sm decoration-0' key={index}>
+                      <a href={link.link}>{link.title}</a>
+                    </p>
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='w-[1028px] mx-auto h-[1px] border-t border-richblack-700'></div>
+        <div className='w-[1028px] flex flex-row justify-between items-center mx-auto text-sm'>
+          <div className='flex flex-row items-center justify-center'>
+            <div className='pr-2'>Privacy Policy</div>
+            <div className='w-[1px] h-3 border border-richblack-600 '></div>
+            <div className='px-2'>Cookie Policy</div>
+            <div className='w-[1px] h-3 border border-richblack-600 '></div>
+            <div className='px-2'>Terms</div>
+          </div>
+          <div className='flex justify-center items-center '>Made with <TbHeartFilled className='inline-flex mx-1 text-[#EF476F]'/> CodeHelp © 2023 StudyNotion</div>
         </div>
       </div>
     </div>
