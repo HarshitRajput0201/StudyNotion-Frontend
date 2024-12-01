@@ -18,6 +18,7 @@ import Facebook_Logo from "../assets/Images/Facebook_Logo.svg";
 import Google_Logo from "../assets/Images/Google_Logo.svg";
 import Twitter_Logo from "../assets/Images/Twitter_Logo.svg";
 import Youtube_Logo from "../assets/Images/Youtube_Logo.svg";
+import ExploreMore from "../Components/Core/HomePage/ExploreMore.jsx";
 
 
 
@@ -122,6 +123,14 @@ const Home = () => {
             bgGradient={Ellipse}
           />
         </div>
+        <div className='w-[1028px] flex flex-col gap-9'>
+          <div className='flex flex-col gap-2 justify-center items-center'>
+            <p className='text-white text-4xl font-semibold'>Unlock the <HighlightedText>Power of Code</HighlightedText></p>
+            <p className='text-richblack-300'>Learn to Build Anything You Can Imagine</p>
+          </div>
+          <ExploreMore/>
+        </div>
+        
       </div>
       {/* Section 1 Ends */}
 
@@ -328,6 +337,7 @@ const Home = () => {
           <div className='flex justify-center items-center '>Made with <TbHeartFilled className='inline-flex mx-1 text-[#EF476F]'/> CodeHelp © 2023 StudyNotion</div>
         </div>
       </div>
+      {/* Footer Ends */}
     </div>
   )
 }
